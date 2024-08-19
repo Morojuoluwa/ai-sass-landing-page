@@ -3,6 +3,7 @@ import Logo from '@/assets/logosaas.png'
 import Image from 'next/image'
 import MenuIcon from '@/assets/menu.svg'
 
+
 const Header = () => {
   return (
     <header className='sticky top-0 backdrop-blur-sm z-20'>
