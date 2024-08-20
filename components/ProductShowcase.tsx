@@ -12,8 +12,8 @@ const ProductShowcase = () => {
             <div className='tag'>Boost your productivity</div>
           </div>
 
-          <h2 className='text-center bg-clip-text text-3xl md:text-[54px] md:leading-[60px] mt-5 font-bolf tracking-tighter text-transparent bg-gradient-to-b from-black to-[#001E80]'>A more effective way to track progress</h2>
-          <p className=' text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E] mt-5'>Effortlessly turn your ideas into a fully functional, responsive, Saas website in just minutes with this template.</p>
+          <h2 className='section-title'>A more effective way to track progress</h2>
+          <p className='section-description'>Effortlessly turn your ideas into a fully functional, responsive, Saas website in just minutes with this template.</p>
 
         </div>
         <div className='relative'>
