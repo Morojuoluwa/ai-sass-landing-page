@@ -3,7 +3,7 @@ import Hero from '@/components/Hero'
 import LogoTicker from '@/components/LogoTicker'
 import { Pricing } from '@/components/Pricing'
 import ProductShowcase from '@/components/ProductShowcase'
-import React from 'react'
+import Testimonials from '@/components/Testimonials'
 
 const  Home = () => {
   return (
@@ -13,6 +13,7 @@ const  Home = () => {
       <LogoTicker/>
       <ProductShowcase/>
       <Pricing/>
+      <Testimonials/>
     </>
   )
 }
