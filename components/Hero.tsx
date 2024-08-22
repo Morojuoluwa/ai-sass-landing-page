@@ -1,12 +1,23 @@
+'use client'
 
+import { easeInOut, motion, useScroll,useTransform } from 'framer-motion'
 import ArrowIcon from '@/assets/arrow-right.svg'
 import cogImage from '@/assets/cog.png'
 import Image from 'next/image'
 import cylinderImg from '@/assets/cylinder.png'
 import noodle from '@/assets/noodle.png'
+import { useRef } from 'react'
 const Hero = () => {
+
+    const heroRef = useRef(null)
+    const {scrollYProgress} = useScroll({
+        target:heroRef,
+        offset:["start end", "end start"]
+
+    })
+    const translateY = useTransform(scrollYProgress, [0,1], [150, -150])
   return (
-    <section className=' pt-8 pb-20 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)]'>
+    <section ref={heroRef} className=' pt-8 pb-20 bg-[radial-gradient(ellipse_200%_100%_at_bottom_left,#183EC2,#EAEEFE_100%)]'>
         <div className='container'>
             <div className=' md:flex items-center'>
                 <div className=' md:w-[478px]'>
@@ -19,15 +30,16 @@ const Hero = () => {
                     </div>
                 </div>
                 <div className=' mt-20 md:mt-0 md:h-[648px] md:flex-1 relative'>
-                    <Image src={cogImage} className='md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0 ' alt=''/>
-                    <Image
-                    src={cylinderImg}
+                    <motion.img animate={{translateY:[-30,30]}} transition={{repeat:Infinity, repeatType:'mirror', duration:3, ease:easeInOut}} src={cogImage.src} className='md:absolute md:h-full md:w-auto md:max-w-none md:-left-6 lg:left-0 ' alt='' />
+                    <motion.img
+                    src={cylinderImg.src}
                     alt=''
                     width={220}
                     height={220}
+                    style={{translateY:translateY}}
                     className='hidden md:block -top-8 -left-32 absolute'
                     />
-                    <Image src={noodle} alt='' width={220} className='absolute left-[448px] hidden lg:block rotate-[30deg] top-[524px]'/>
+                    <motion.img src={noodle.src} style={{translateY:translateY, rotate:30}} alt='' width={220} className='absolute left-[448px] hidden lg:block rotate-[30deg] top-[524px]'/>
                 </div>
 
             </div>
