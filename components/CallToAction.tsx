@@ -13,7 +13,7 @@ const CallToAction = () => {
                 Celebrate the joy of accomplishment with an app designed to track your progress and motivate your effort.
             </p>
             <Image src={StarImg} width={360} alt='' className='absolute -left-[350px] -top-[137px]'/>
-            <Image src={SpringImg} width={360} alt='' className='absolute -left-[350px] -top-[137px]'/>
+            <Image src={SpringImg} width={360} alt='' className='absolute -right-[331px] -top-[19px]'/>
 
         </div>
         <div className=' flex gap-2 mt-10 justify-center'>
