@@ -8,7 +8,11 @@ const dmSans = DM_Sans({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Saas Landing Page",
   description: "A sass landing page built by patricjTheDev",
+  icons:{ 
+    icon:'./logosaas.png'
+  }
 };
+
 
 export default function RootLayout({
   children,
